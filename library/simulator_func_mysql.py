@@ -113,12 +113,10 @@ class simulator_func_mysql:
         ###!@####################################################################################################################
         # 아래 부터는 알고리즘 별로 별도의 설정을 해주는 부분
 
-        if self.simul_num == 1:
-            self.use_min = True
-            self.only_nine_buy = True
+        if self.simul_num in (1,4):
 
             # 시뮬레이팅 시작 일자(분 별 시뮬레이션의 경우 최근 1년 치 데이터만 있기 때문에 start_date 조정 필요)
-            self.simul_start_date = "202107010"
+            self.simul_start_date = '19850101'
 
             ######### 알고리즘 선택 #############
             # 매수 리스트 설정 알고리즘 번호
@@ -149,6 +147,12 @@ class simulator_func_mysql:
             self.invest_limit_rate = 1.01
             # 실전/모의 봇 돌릴 때 매수하는 순간 종목의 최신 종가 보다 -2% 이하로 떨어진 경우 사지 않도록 하는 설정(변경 가능)
             self.invest_min_limit_rate = 0.98
+
+            if self.simul_num == 4:
+                self.simul_start_date = '202107010'
+
+                self.use_min = True
+                self.only_nine_buy = True
 
         elif self.simul_num == 2:
             # 시뮬레이팅 시작 일자
