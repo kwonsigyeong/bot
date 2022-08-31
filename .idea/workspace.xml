@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caba30be-575c-4b23-b4da-3ed5b07a901b" name="변경" comment="변경">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/simulator_func_mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/simulator_func_mysql.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -231,7 +230,7 @@
       <workItem from="1661908980337" duration="15000" />
       <workItem from="1661909323607" duration="23000" />
       <workItem from="1661909506062" duration="120000" />
-      <workItem from="1661926885238" duration="667000" />
+      <workItem from="1661926885238" duration="1025000" />
     </task>
     <task id="LOCAL-00001" summary="변경">
       <created>1661908075776</created>

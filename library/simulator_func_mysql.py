@@ -149,7 +149,7 @@ class simulator_func_mysql:
             self.invest_min_limit_rate = 0.98
 
             if self.simul_num == 4:
-                self.simul_start_date = '202107010'
+                self.simul_start_date = '20210701'
 
                 self.use_min = True
                 self.only_nine_buy = True
