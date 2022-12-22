@@ -1,5 +1,5 @@
-
 import pandas as pd
+
 
 class StockItem():
     def __init__(self):
@@ -13,9 +13,10 @@ class StockItem():
     def get_item_kospi(self):
         print("get_item_kospi!!")
         self.code_df_kospi = \
-        pd.read_html('http://kind.krx.co.kr/corpgeneral/corpList.do?method=download&searchType=13&marketType=stockMkt',
-                     header=0)[
-            0]  # 종목코드가 6자리이기 때문에 6자리를 맞춰주기 위해 설정해줌
+            pd.read_html(
+                'http://kind.krx.co.kr/corpgeneral/corpList.do?method=download&searchType=13&marketType=stockMkt',
+                header=0)[
+                0]  # 종목코드가 6자리이기 때문에 6자리를 맞춰주기 위해 설정해줌
 
         # 6자리 만들고 앞에 0을 붙인다.
         self.code_df_kospi.종목코드 = self.code_df_kospi.종목코드.map('{:06d}'.format)
@@ -31,9 +32,10 @@ class StockItem():
     def get_item_kosdaq(self):
         print("get_item_kosdaq!!")
         self.code_df_kosdaq = \
-        pd.read_html('http://kind.krx.co.kr/corpgeneral/corpList.do?method=download&searchType=13&marketType=kosdaqMkt',
-                     header=0)[
-            0]  # 종목코드가 6자리이기 때문에 6자리를 맞춰주기 위해 설정해줌
+            pd.read_html(
+                'http://kind.krx.co.kr/corpgeneral/corpList.do?method=download&searchType=13&marketType=kosdaqMkt',
+                header=0)[
+                0]  # 종목코드가 6자리이기 때문에 6자리를 맞춰주기 위해 설정해줌
 
         # 6자리 만들고 앞에 0을 붙인다.
         self.code_df_kosdaq.종목코드 = self.code_df_kosdaq.종목코드.map('{:06d}'.format)
@@ -46,7 +48,6 @@ class StockItem():
         return self.code_df_kosdaq
 
 
-
 if __name__ == "__main__":
     s = StockItem()
     print("코스피 종목 수: ", len(s.code_df_kospi))
@@ -56,7 +57,3 @@ if __name__ == "__main__":
     print("코스닥 종목 수: ", len(s.code_df_kosdaq))
     print(s.code_df_kosdaq)
     print(type(s.code_df_kospi))
-
-
-
-
